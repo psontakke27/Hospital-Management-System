@@ -1,13 +1,21 @@
 
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css'
+import LoginPage from './components/login/LoginPage';
+import SignupPage from './components/signup/signupPage';
+import AdminPage from './components/admin/adminPage';
 
 function App() {
   return (
-    <div className="flex items-center justify-center h-screen bg-gray-100">
-      <h1 className="text-3xl font-bold text-blue-800">
-        Tailwind is working 
-      </h1>
-    </div>
+     <BrowserRouter>
+      <Routes>
+        {/* default */}
+        <Route path="/" element={<LoginPage/>}/>
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignupPage />} />
+        <Route path="/admin" element={<AdminPage/>}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

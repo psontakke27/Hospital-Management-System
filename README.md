@@ -71,3 +71,13 @@ export default defineConfig([
   },
 ])
 ```
+
+# fronted 
+react
+yup
+formik
+react toastify
+
+
+
+
