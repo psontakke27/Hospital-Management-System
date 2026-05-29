@@ -41,7 +41,7 @@ export default function LoginPage() {
                     console.log("user login ")
                     // store token   localStorage.setItem("token", data.access_token);
                     localStorage.setItem("token", data.access_token )
-                     navigate("/admin");;
+                     navigate("/hospital");;
                     console.log("🚀 ~ LoginPage ~ data.access_taken:", data.access_token)
                     toast.success("Login successful")
                 } else {

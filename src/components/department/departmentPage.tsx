@@ -39,7 +39,7 @@ const DepartmentPage = () => {
     const handleSelectDepartment= (id) =>{ 
         setSelectedDepartment(id);
         console.log("🚀 ~ handleSelectDepartmentn ~ id:", id)
-        navigate(`/room/${id}`)
+        navigate(`/${hospitalId}/${id}/room`)
 
     }
 
@@ -137,6 +137,11 @@ const DepartmentPage = () => {
                             value={formik.values.maxRooms}
                             onChange={formik.handleChange}
                         />
+                        {formik.errors.maxRooms && (
+                            <p className="text-red-500 text-sm mt-1">
+                                {formik.errors.maxRooms}
+                            </p>
+                        )}
                     </div>
 
                     {/* Button */}

@@ -18,8 +18,8 @@ function App() {
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/admin" element={<AdminPage/>}/>
         <Route path='/hospital' element={<HospitalForm/>}/>
-        <Route path='/department/:hospitalId' element={<DepartmentPage/>}/>
-        <Route path='/room/:departmentId' element={<RoomPage/>}/>
+        <Route path='/:hospitalId/department' element={<DepartmentPage/>}/>
+        <Route path='/:hospitalId/:departmentId/room' element={<RoomPage/>}/>
       </Routes>
     </BrowserRouter>
   );
